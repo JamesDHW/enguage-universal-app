@@ -1,103 +1,38 @@
-# Enguage Universal App from Tamagui + Solito + Next + Expo Monorepo
+# 🌌 Enguage Universal App
 
-This is a Universal App to show the functionality of the Enguage Natural Language Understanding library.
+<p align="center">
+  <img src="./assets/enguage.png">
+  </br>
+  This is a Universal App to show the functionality of the Enguage Natural Language Understanding library.
+</p>
 
-## TODOs:
+## 🚀 See the app deployed
+
+<table align="center">
+  <tr display="flex">
+    <th>🤖 Android: </th>
+    <th>🍎 iOS: </th>
+    <th>🕸️ Web: </th>
+  </tr>
+    <td>
+      <img width="200" height="200" src="./assets/android.png">
+    </td>
+    <td>
+      <img width="200" height="200" src="./assets/ios.png">
+    </td>
+    <td>
+      <a href="https://enguage-universal-app-next-n61urasnk-jamesdhw.vercel.app/chat" target="_blank">NextJS app on Vercel</a>
+    </td>
+</table>
+
+## ✅ TODOs:
 
 - Session management
 - Voice interface
-- Enter to submit message on web
+- Fix TS configs + more refactoring
 
-```sh
-npm create tamagui
-```
+## ⚠️ Quick note
 
-## 🔦 About
+I made this repo quite quickly as a POC - if I had more time I would fix some of the leaky abstractions and set up better boundaries within the code. More refactoring to clean up the repo might be incoming!
 
-This monorepo is a starter for an Expo + Next.js + Tamagui + Solito app.
-
-Many thanks to [@FernandoTheRojo](https://twitter.com/fernandotherojo) for the Solito starter monorepo which this was forked from. Check out his [talk about using expo + next together at Next.js Conf 2021](https://www.youtube.com/watch?v=0lnbdRweJtA).
-
-## 📦 Included packages
-
-- [Tamagui](https://tamagui.dev) 🪄
-- [solito](https://solito.dev) for cross-platform navigation
-- Expo SDK
-- Next.js
-- Expo Router
-
-## 🗂 Folder layout
-
-The main apps are:
-
-- `expo` (native)
-- `next` (web)
-
-- `packages` shared packages across apps
-  - `ui` includes your custom UI kit that will be optimized by Tamagui
-  - `app` you'll be importing most files from `app/`
-    - `features` (don't use a `screens` folder. organize by feature.)
-    - `provider` (all the providers that wrap the app, and some no-ops for Web.)
-
-You can add other folders inside of `packages/` if you know what you're doing and have a good reason to.
-
-## 🏁 Start the app
-
-- Install dependencies: `yarn`
-
-- Next.js local dev: `yarn web`
-
-To run with optimizer on in dev mode (just for testing, it's faster to leave it off): `yarn web:extract`. To build for production `yarn web:prod`.
-
-To see debug output to verify the compiler, add `// debug` as a comment to the top of any file.
-
-- Expo local dev: `yarn native`
-
-## UI Kit
-
-Note we're following the [design systems guide](https://tamagui.dev/docs/guides/design-systems) and creating our own package for components.
-
-See `packages/ui` named `@enguage/atoms` for how this works.
-
-## 🆕 Add new dependencies
-
-### Pure JS dependencies
-
-If you're installing a JavaScript-only dependency that will be used across platforms, install it in `packages/app`:
-
-```sh
-cd packages/app
-yarn add date-fns
-cd ../..
-yarn
-```
-
-### Native dependencies
-
-If you're installing a library with any native code, you must install it in `expo`:
-
-```sh
-cd apps/expo
-yarn add react-native-reanimated
-cd ..
-yarn
-```
-
-## Update new dependencies
-
-### Pure JS dependencies
-
-```sh
-yarn upgrade-interactive
-```
-
-You can also install the native library inside of `packages/app` if you want to get autoimport for that package inside of the `app` folder. However, you need to be careful and install the _exact_ same version in both packages. If the versions mismatch at all, you'll potentially get terrible bugs. This is a classic monorepo issue. I use `lerna-update-wizard` to help with this (you don't need to use Lerna to use that lib).
-
-You may potentially want to have the native module transpiled for the next app. If you get error messages with `Cannot use import statement outside a module`, you may need to use `transpilePackages` in your `next.config.js` and add the module to the array there.
-
-### Deploying to Vercel
-
-- Root: `apps/next`
-- Install command to be `yarn set version berry && yarn install`
-- Build command: leave default setting
-- Output dir: leave default setting
+[Auto-generated Readme](./docs/README.md)
