@@ -1,0 +1,10 @@
+{
+  "version": "0.0.0",
+  "name": "@enguage/caching",
+  "main": "index.ts",
+  "private": true,
+  "dependencies": {
+    "@tanstack/react-query": "^4.33.0",
+    "axios": "^1.5.0"
+  }
+}

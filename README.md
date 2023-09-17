@@ -1,4 +1,12 @@
-# Tamagui + Solito + Next + Expo Monorepo
+# Enguage Universal App from Tamagui + Solito + Next + Expo Monorepo
+
+This is a Universal App to show the functionality of the Enguage Natural Language Understanding library.
+
+## TODOs:
+
+- Session management
+- Voice interface
+- Enter to submit message on web
 
 ```sh
 npm create tamagui
@@ -49,7 +57,7 @@ To see debug output to verify the compiler, add `// debug` as a comment to the t
 
 Note we're following the [design systems guide](https://tamagui.dev/docs/guides/design-systems) and creating our own package for components.
 
-See `packages/ui` named `@my/ui` for how this works.
+See `packages/ui` named `@enguage/atoms` for how this works.
 
 ## 🆕 Add new dependencies
 

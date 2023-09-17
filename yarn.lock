@@ -1864,6 +1864,52 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@enguage/atoms@0.0.1, @enguage/atoms@workspace:packages/atoms":
+  version: 0.0.0-use.local
+  resolution: "@enguage/atoms@workspace:packages/atoms"
+  dependencies:
+    "@tamagui/animations-react-native": latest
+    "@tamagui/build": latest
+    "@tamagui/font-inter": latest
+    "@tamagui/react-native-media-driver": latest
+    "@tamagui/shorthands": latest
+    "@tamagui/themes": latest
+    "@tamagui/toast": latest
+    react: ^18.2.0
+    tamagui: latest
+  languageName: unknown
+  linkType: soft
+
+"@enguage/caching@0.0.0, @enguage/caching@workspace:packages/caching":
+  version: 0.0.0-use.local
+  resolution: "@enguage/caching@workspace:packages/caching"
+  dependencies:
+    "@tanstack/react-query": ^4.33.0
+    axios: ^1.5.0
+  languageName: unknown
+  linkType: soft
+
+"@enguage/core@0.0.0, @enguage/core@workspace:packages/core":
+  version: 0.0.0-use.local
+  resolution: "@enguage/core@workspace:packages/core"
+  dependencies:
+    "@enguage/atoms": 0.0.1
+    "@tamagui/animations-react-native": latest
+    "@tamagui/colors": latest
+    "@tamagui/font-inter": latest
+    "@tamagui/lucide-icons": latest
+    "@tamagui/shorthands": latest
+    "@tamagui/themes": latest
+    "@types/react": ^18.0.27
+    "@types/react-native": ^0.71.3
+    burnt: ^0.10.0
+    expo-constants: ^14.2.1
+    expo-linking: ^4.0.1
+    react-native-safe-area-context: ^4.5.2
+    solito: ^3.0.0
+  languageName: unknown
+  linkType: soft
+
 "@esbuild-plugins/node-modules-polyfill@npm:^0.1.4":
   version: 0.1.4
   resolution: "@esbuild-plugins/node-modules-polyfill@npm:0.1.4"
@@ -3355,21 +3401,6 @@ __metadata:
   checksum: 1a98db05d955b74dad3814679593df293b9194853698f3f5f1ed00ecd93128cdd4b14fb8767fe44ac6981ef05c23effcfdc88710e7c1de99ccb6f647890597c8
   languageName: node
   linkType: hard
-
-"@my/ui@0.0.1, @my/ui@workspace:packages/ui":
-  version: 0.0.0-use.local
-  resolution: "@my/ui@workspace:packages/ui"
-  dependencies:
-    "@tamagui/animations-react-native": latest
-    "@tamagui/build": latest
-    "@tamagui/font-inter": latest
-    "@tamagui/react-native-media-driver": latest
-    "@tamagui/shorthands": latest
-    "@tamagui/themes": latest
-    "@tamagui/toast": latest
-    tamagui: latest
-  languageName: unknown
-  linkType: soft
 
 "@next/env@npm:13.4.4":
   version: 13.4.4
@@ -5370,6 +5401,32 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tanstack/query-core@npm:4.33.0":
+  version: 4.33.0
+  resolution: "@tanstack/query-core@npm:4.33.0"
+  checksum: fae325f1d79b936435787797c32367331d5b8e9c5ced84852bf2085115e3aafef57a7ae530a6b0af46da4abafb4b0afaef885926b71715a0e6f166d74da61c7f
+  languageName: node
+  linkType: hard
+
+"@tanstack/react-query@npm:^4.33.0":
+  version: 4.33.0
+  resolution: "@tanstack/react-query@npm:4.33.0"
+  dependencies:
+    "@tanstack/query-core": 4.33.0
+    use-sync-external-store: ^1.2.0
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-native: "*"
+  peerDependenciesMeta:
+    react-dom:
+      optional: true
+    react-native:
+      optional: true
+  checksum: b3cf4afa427435e464e077b3f23c891e38e5f78873518f15c1d061ad55f1464d6241ecd92d796a5dbc9412b4fd7eb30b01f2a9cfc285ee9f30dfdd2ca0ecaf4b
+  languageName: node
+  linkType: hard
+
 "@tootallnate/once@npm:1":
   version: 1.1.2
   resolution: "@tootallnate/once@npm:1.1.2"
@@ -6345,27 +6402,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"app@0.0.0, app@workspace:packages/app":
-  version: 0.0.0-use.local
-  resolution: "app@workspace:packages/app"
-  dependencies:
-    "@my/ui": 0.0.1
-    "@tamagui/animations-react-native": latest
-    "@tamagui/colors": latest
-    "@tamagui/font-inter": latest
-    "@tamagui/lucide-icons": latest
-    "@tamagui/shorthands": latest
-    "@tamagui/themes": latest
-    "@types/react": ^18.0.27
-    "@types/react-native": ^0.71.3
-    burnt: ^0.10.0
-    expo-constants: ^14.2.1
-    expo-linking: ^4.0.1
-    react-native-safe-area-context: ^4.5.2
-    solito: ^3.0.0
-  languageName: unknown
-  linkType: soft
-
 "appdirsjs@npm:^1.2.4":
   version: 1.2.7
   resolution: "appdirsjs@npm:1.2.7"
@@ -6704,6 +6740,17 @@ __metadata:
   version: 4.7.0
   resolution: "axe-core@npm:4.7.0"
   checksum: f086bcab42be1761ba2b0b127dec350087f4c3a853bba8dd58f69d898cefaac31a1561da23146f6f3c07954c76171d1f2ce460e555e052d2b02cd79af628fa4a
+  languageName: node
+  linkType: hard
+
+"axios@npm:^1.5.0":
+  version: 1.5.0
+  resolution: "axios@npm:1.5.0"
+  dependencies:
+    follow-redirects: ^1.15.0
+    form-data: ^4.0.0
+    proxy-from-env: ^1.1.0
+  checksum: e7405a5dbbea97760d0e6cd58fecba311b0401ddb4a8efbc4108f5537da9b3f278bde566deb777935a960beec4fa18e7b8353881f2f465e4f2c0e949fead35be
   languageName: node
   linkType: hard
 
@@ -8736,6 +8783,81 @@ __metadata:
   languageName: node
   linkType: hard
 
+"enguage-expo-app@workspace:apps/expo":
+  version: 0.0.0-use.local
+  resolution: "enguage-expo-app@workspace:apps/expo"
+  dependencies:
+    "@babel/core": ^7.17.9
+    "@babel/runtime": ^7.18.9
+    "@enguage/atoms": 0.0.1
+    "@enguage/caching": 0.0.0
+    "@enguage/core": 0.0.0
+    "@expo/metro-config": ^0.3.21
+    "@react-navigation/native": ^6.1.6
+    "@tamagui/babel-plugin": latest
+    "@types/react-native": ^0.71.3
+    babel-plugin-module-resolver: ^4.1.0
+    babel-plugin-transform-inline-environment-variables: ^0.4.4
+    burnt: ^0.10.0
+    expo: ^48.0.7
+    expo-constants: ^14.2.1
+    expo-dev-client: ^2.1.5
+    expo-font: ^11.1.1
+    expo-linear-gradient: ^12.1.2
+    expo-linking: ^4.0.1
+    expo-router: ^1.4.3
+    expo-splash-screen: ^0.18.1
+    expo-status-bar: ^1.4.4
+    expo-updates: ^0.16.3
+    metro-minify-terser: ^0.74.1
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    react-native: ^0.71.4
+    react-native-gesture-handler: ^2.9.0
+    react-native-safe-area-context: ^4.5.2
+    react-native-screens: ^3.20.0
+    react-native-svg: 13.4.0
+    react-native-web: ^0.18.12
+    typescript: ^5.1.3
+  languageName: unknown
+  linkType: soft
+
+"enguage-next-app@workspace:apps/next":
+  version: 0.0.0-use.local
+  resolution: "enguage-next-app@workspace:apps/next"
+  dependencies:
+    "@enguage/caching": 0.0.0
+    "@enguage/core": 0.0.0
+    "@tamagui/next-plugin": latest
+    "@tamagui/next-theme": latest
+    "@types/node": ^18.6.4
+    eslint-config-next: ^13.0.4
+    next: 13.4.4
+    raf: ^3.4.1
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    react-native: ^0.71.4
+    react-native-web: ^0.18.12
+    react-native-web-lite: latest
+    vercel: latest
+  languageName: unknown
+  linkType: soft
+
+"enguage-universal-app@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "enguage-universal-app@workspace:."
+  dependencies:
+    "@babel/runtime": ^7.18.9
+    "@manypkg/cli": ^0.19.1
+    check-dependency-version-consistency: ^3.0.3
+    eslint: ^8.21.0
+    node-gyp: ^9.3.1
+    prettier: ^2.7.1
+    turbo: ^1.10.3
+    typescript: ^5.1.3
+  languageName: unknown
+  linkType: soft
+
 "enhanced-resolve@npm:^5.12.0":
   version: 5.13.0
   resolution: "enhanced-resolve@npm:5.13.0"
@@ -9957,44 +10079,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"expo-app@workspace:apps/expo":
-  version: 0.0.0-use.local
-  resolution: "expo-app@workspace:apps/expo"
-  dependencies:
-    "@babel/core": ^7.17.9
-    "@babel/runtime": ^7.18.9
-    "@expo/metro-config": ^0.3.21
-    "@my/ui": 0.0.1
-    "@react-navigation/native": ^6.1.6
-    "@tamagui/babel-plugin": latest
-    "@types/react-native": ^0.71.3
-    app: 0.0.0
-    babel-plugin-module-resolver: ^4.1.0
-    babel-plugin-transform-inline-environment-variables: ^0.4.4
-    burnt: ^0.10.0
-    expo: ^48.0.7
-    expo-constants: ^14.2.1
-    expo-dev-client: ^2.1.5
-    expo-font: ^11.1.1
-    expo-linear-gradient: ^12.1.2
-    expo-linking: ^4.0.1
-    expo-router: ^1.4.3
-    expo-splash-screen: ^0.18.1
-    expo-status-bar: ^1.4.4
-    expo-updates: ^0.16.3
-    metro-minify-terser: ^0.74.1
-    react: ^18.2.0
-    react-dom: ^18.2.0
-    react-native: ^0.71.4
-    react-native-gesture-handler: ^2.9.0
-    react-native-safe-area-context: ^4.5.2
-    react-native-screens: ^3.20.0
-    react-native-svg: 13.4.0
-    react-native-web: ^0.18.12
-    typescript: ^5.1.3
-  languageName: unknown
-  linkType: soft
-
 "expo-application@npm:~5.1.1":
   version: 5.1.1
   resolution: "expo-application@npm:5.1.1"
@@ -10762,6 +10846,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"follow-redirects@npm:^1.15.0":
+  version: 1.15.2
+  resolution: "follow-redirects@npm:1.15.2"
+  peerDependenciesMeta:
+    debug:
+      optional: true
+  checksum: faa66059b66358ba65c234c2f2a37fcec029dc22775f35d9ad6abac56003268baf41e55f9ee645957b32c7d9f62baf1f0b906e68267276f54ec4b4c597c2b190
+  languageName: node
+  linkType: hard
+
 "fontfaceobserver@npm:^2.1.0":
   version: 2.3.0
   resolution: "fontfaceobserver@npm:2.3.0"
@@ -10793,6 +10887,17 @@ __metadata:
     combined-stream: ^1.0.8
     mime-types: ^2.1.12
   checksum: b019e8d35c8afc14a2bd8a7a92fa4f525a4726b6d5a9740e8d2623c30e308fbb58dc8469f90415a856698933c8479b01646a9dff33c87cc4e76d72aedbbf860d
+  languageName: node
+  linkType: hard
+
+"form-data@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "form-data@npm:4.0.0"
+  dependencies:
+    asynckit: ^0.4.0
+    combined-stream: ^1.0.8
+    mime-types: ^2.1.12
+  checksum: 01135bf8675f9d5c61ff18e2e2932f719ca4de964e3be90ef4c36aacfc7b9cb2fceb5eca0b7e0190e3383fe51c5b37f4cb80b62ca06a99aaabfcfd6ac7c9328c
   languageName: node
   linkType: hard
 
@@ -14691,41 +14796,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-app@workspace:apps/next":
-  version: 0.0.0-use.local
-  resolution: "next-app@workspace:apps/next"
-  dependencies:
-    "@tamagui/next-plugin": latest
-    "@tamagui/next-theme": latest
-    "@types/node": ^18.6.4
-    app: 0.0.0
-    eslint-config-next: ^13.0.4
-    next: 13.4.4
-    raf: ^3.4.1
-    react: ^18.2.0
-    react-dom: ^18.2.0
-    react-native: ^0.71.4
-    react-native-web: ^0.18.12
-    react-native-web-lite: latest
-    vercel: latest
-  languageName: unknown
-  linkType: soft
-
-"next-expo-solito-monorepo@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "next-expo-solito-monorepo@workspace:."
-  dependencies:
-    "@babel/runtime": ^7.18.9
-    "@manypkg/cli": ^0.19.1
-    check-dependency-version-consistency: ^3.0.3
-    eslint: ^8.21.0
-    node-gyp: ^9.3.1
-    prettier: ^2.7.1
-    turbo: ^1.10.3
-    typescript: ^5.1.3
-  languageName: unknown
-  linkType: soft
-
 "next@npm:13.4.4":
   version: 13.4.4
   resolution: "next@npm:13.4.4"
@@ -16099,7 +16169,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"proxy-from-env@npm:^1.0.0":
+"proxy-from-env@npm:^1.0.0, proxy-from-env@npm:^1.1.0":
   version: 1.1.0
   resolution: "proxy-from-env@npm:1.1.0"
   checksum: ed7fcc2ba0a33404958e34d95d18638249a68c430e30fcb6c478497d72739ba64ce9810a24f53a7d921d0c065e5b78e3822759800698167256b04659366ca4d4
@@ -19397,7 +19467,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"use-sync-external-store@npm:1.2.0, use-sync-external-store@npm:^1.0.0":
+"use-sync-external-store@npm:1.2.0, use-sync-external-store@npm:^1.0.0, use-sync-external-store@npm:^1.2.0":
   version: 1.2.0
   resolution: "use-sync-external-store@npm:1.2.0"
   peerDependencies:

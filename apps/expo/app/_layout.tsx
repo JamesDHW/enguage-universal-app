@@ -1,8 +1,10 @@
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native'
-import { Provider } from 'app/provider'
+import { UiProvider } from '@enguage/core/provider'
 import { useFonts } from 'expo-font'
-import { Stack } from 'expo-router'
+import { Tabs } from 'expo-router'
 import { useColorScheme } from 'react-native'
+import { CacheProvider } from '@enguage/caching'
+import { Home, MessageCircle } from '@tamagui/lucide-icons'
 
 export default function HomeLayout() {
   const [loaded] = useFonts({
@@ -15,10 +17,28 @@ export default function HomeLayout() {
     return null
   }
   return (
-    <Provider>
-      <ThemeProvider value={scheme === 'dark' ? DarkTheme : DefaultTheme}>
-        <Stack />
-      </ThemeProvider>
-    </Provider>
+    <CacheProvider>
+      <UiProvider>
+        <ThemeProvider value={scheme === 'dark' ? DarkTheme : DefaultTheme}>
+          <Tabs>
+            <Tabs.Screen
+              name="index"
+              options={{
+                href: '',
+                tabBarIcon: () => <Home />,
+              }}
+            />
+            <Tabs.Screen
+              name="chat"
+              options={{
+                href: 'chat',
+                tabBarLabel: 'Chat',
+                tabBarIcon: () => <MessageCircle />,
+              }}
+            />
+          </Tabs>
+        </ThemeProvider>
+      </UiProvider>
+    </CacheProvider>
   )
 }
